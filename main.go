@@ -130,15 +130,15 @@ func getEnv(key, dflt string) string {
 	return dflt
 }
 
-func main() {
-	ApiKey := getEnv("API_KEY", "API-KEY")
-	ApiVersion := getEnv("API_VERSION", "v4")
-	CurrencySource := getEnv("CURRENCY_SOURCE", "GBP")
-	CurrencyDest := getEnv("CURRENCY_DEST", "USD")
-	currencyRequest := NewCurrency(ApiKey, ApiVersion)
-	currencyRequest.Request.Source = CurrencySource
-	currencyRequest.Request.Dest = CurrencyDest
-	rate := currencyRequest.GetConversionRate()
-	fmt.Printf("Rate: %f\n", rate)
+/*func main() {
+ApiKey := getEnv("API_KEY", "API-KEY")
+ApiVersion := getEnv("API_VERSION", "v4")
+CurrencySource := getEnv("CURRENCY_SOURCE", "GBP")
+CurrencyDest := getEnv("CURRENCY_DEST", "USD")
+currencyRequest := NewCurrency(ApiKey, ApiVersion)
+currencyRequest.Request.Source = CurrencySource
+currencyRequest.Request.Dest = CurrencyDest
+rate := currencyRequest.GetConversionRate()
+fmt.Printf("Rate: %f\n", rate)
 
-}
+}*/
