@@ -7,10 +7,9 @@ import (
 )
 
 
-
 func Test_readUrl(*T testing.T) {
 	r := mux.NewRouter()
-	r.HandleFunc("/latest/{currency}", readUrl)
+	r.Handle("/latest/{currency}", readUrl())
 	ts := httptest.NewServer(r)
 	defer ts.Close()
 
